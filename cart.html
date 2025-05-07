@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Your Cart</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<style>
+			.actions {
+				display: flex;
+				justify-content: center;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<h1 style="text-align: center;">Your Cart</h1>
+					<!-- Nav Trigger (Hamburger Menu) -->
+					<nav>
+						<ul>
+							<li>
+								<a href="#menu">Menu</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li>
+						<a href="index.html">
+							<b>Home</b>
+						</a>
+					</li>
+					<li>
+						<a href="Food.html">Food & Beverage Team</a>
+					</li>
+					<li>
+						<a href="FrontLine.html">Front Line Team</a>
+					</li>
+					<li>
+						<a href="Housekeeping.html">Housekeeping Team</a>
+					</li>
+					<li>
+						<a href="interpretive.html">Interpretive Team</a>
+					</li>
+					<li>
+						<a href="Management.html">Management Team</a>
+					</li>
+					<li>
+						<a href="Maintenance.html">Maintenance Team</a>
+					</li>
+					<li>
+						<a href="seasonal.html">Seasonal Team</a>
+					</li>
+					<li>
+						<a href="TandM.html">T & M Supervisor - Manager</a>
+					</li>
+					<li>
+						<a href="cart.html">Cart</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<section>
+						<div id="cart-items"></div>
+						<h2 style="text-align: center;">Checkout Details</h2>
+						<form id="checkout-form" onsubmit="event.preventDefault(); submitOrder();">
+							<div class="fields">
+								<div class="field" style="margin-left: 10%; margin-right: 10%; width: 80%;">
+									<label for="park">Park Name</label>
+									<input type="text" id="park" name="park" required>
+								</div>
+								<div class="field" style="margin-left: 10%; margin-right: 10%; width: 80%;">
+									<label for="name">Your Name</label>
+									<input type="text" id="name" name="name" required>
+								</div>
+								<div class="field" style="margin-left: 10%; margin-right: 10%; width: 80%;">
+									<label for="phone">Phone Number</label>
+									<input type="tel" id="phone" name="phone" required>
+								</div>
+								<div class="field" style="margin-left: 10%; margin-right: 10%; width: 80%;">
+									<label for="email">Email</label>
+									<input type="email" id="email" name="email" required>
+								</div>
+							</div>
+							<ul class="actions">
+								<li>
+									<input type="submit" value="Request" class="primary">
+								</li>
+							</ul>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/cart.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', renderCart);
+		</script>
+	</body>
+</html>
